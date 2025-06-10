@@ -10,43 +10,43 @@ const ProductCarousel = () => {
     {
       id: 1,
       name: "MARS TABLETS",
-      price: "Tsh 45,000",
+      price: "Tsh 100,000",
       image: "/lovable-uploads/1823436a-7fec-424d-ac7c-47bc72720f20.png"
     },
     {
       id: 2,
       name: "ATOM CAPSULES",
-      price: "Tsh 38,000",
+      price: "Tsh 100,000",
       image: "/lovable-uploads/2c8c3649-fc59-42fb-8f88-4b9130fb857c.png"
     },
     {
       id: 3,
       name: "LIQUID GOLD",
-      price: "Tsh 52,000",
+      price: "Tsh 100,000",
       image: "/lovable-uploads/1823436a-7fec-424d-ac7c-47bc72720f20.png"
     },
     {
       id: 4,
       name: "LIFE CAPSULES",
-      price: "Tsh 35,000",
+      price: "Tsh 100,000",
       image: "/lovable-uploads/014a176f-f932-4132-99d7-0f1394e009cb.png"
     },
     {
       id: 5,
       name: "HCG CAPSULES",
-      price: "Tsh 48,000",
+      price: "Tsh 100,000",
       image: "/lovable-uploads/7d68ccaa-6701-4824-a674-9f0d9f158b90.png"
     },
     {
       id: 6,
       name: "SLEEP N LOOSE",
-      price: "Tsh 42,000",
+      price: "Tsh 100,000",
       image: "/lovable-uploads/305f94fb-8431-4ca8-8ced-4bc44479fee1.png"
     },
     {
       id: 7,
       name: "TeDIVINA DETOX TEA",
-      price: "Tsh 28,000",
+      price: "Tsh 150,000",
       image: "/lovable-uploads/0e1bae9b-db5a-4c12-902d-4d5c1d658bff.png"
     }
   ];
