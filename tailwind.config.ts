@@ -53,14 +53,39 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// Vida Divina brand colors
-				'vida-burgundy': {
-					DEFAULT: 'hsl(0, 47%, 35%)',
-					light: 'hsl(0, 47%, 45%)',
-					dark: 'hsl(0, 47%, 25%)',
+				// Modern color palette
+				'modern-green': {
+					DEFAULT: 'hsl(120, 61%, 34%)',
+					50: 'hsl(120, 60%, 97%)',
+					100: 'hsl(120, 60%, 95%)',
+					200: 'hsl(120, 60%, 90%)',
+					300: 'hsl(120, 55%, 75%)',
+					400: 'hsl(120, 55%, 60%)',
+					500: 'hsl(120, 61%, 34%)',
+					600: 'hsl(120, 65%, 25%)',
+					700: 'hsl(120, 70%, 20%)',
+					800: 'hsl(120, 75%, 15%)',
+					900: 'hsl(120, 80%, 10%)',
 				},
-				'vida-cream': 'hsl(0, 20%, 96%)',
-				'vida-white': 'hsl(0, 0%, 100%)',
+				'modern-gold': {
+					DEFAULT: 'hsl(45, 96%, 53%)',
+					100: 'hsl(45, 96%, 95%)',
+					200: 'hsl(45, 96%, 85%)',
+					300: 'hsl(45, 96%, 75%)',
+					400: 'hsl(45, 96%, 65%)',
+					500: 'hsl(45, 96%, 53%)',
+					600: 'hsl(45, 96%, 43%)',
+					700: 'hsl(45, 96%, 33%)',
+				},
+				'modern-red': {
+					DEFAULT: 'hsl(0, 84%, 60%)',
+					100: 'hsl(0, 84%, 95%)',
+					200: 'hsl(0, 84%, 85%)',
+					300: 'hsl(0, 84%, 75%)',
+					400: 'hsl(0, 84%, 65%)',
+					500: 'hsl(0, 84%, 60%)',
+					600: 'hsl(0, 84%, 50%)',
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -93,12 +118,28 @@ export default {
 						opacity: '1',
 						transform: 'translateY(0)'
 					}
+				},
+				'modern-bounce': {
+					'0%, 100%': {
+						transform: 'translateY(0)',
+						animationTimingFunction: 'cubic-bezier(0.8, 0, 1, 1)'
+					},
+					'50%': {
+						transform: 'translateY(-5px)',
+						animationTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fade-in': 'fade-in 0.3s ease-out'
+				'fade-in': 'fade-in 0.3s ease-out',
+				'modern-bounce': 'modern-bounce 1s infinite'
+			},
+			backgroundImage: {
+				'modern-gradient': 'linear-gradient(135deg, #16a34a 0%, #22c55e 50%, #fbbf24 100%)',
+				'green-gradient': 'linear-gradient(135deg, #16a34a 0%, #22c55e 100%)',
+				'gold-gradient': 'linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%)',
 			}
 		}
 	},

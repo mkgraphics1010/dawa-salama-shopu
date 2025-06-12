@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { Menu, X, ShoppingCart, Phone, MessageCircle, History } from 'lucide-react';
+import { Menu, X, ShoppingCart, Phone, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Header = () => {
@@ -21,59 +21,59 @@ const Header = () => {
 
   return (
     <>
-      {/* Scrolling Text Animation */}
-      <div className="bg-gradient-to-r from-green-600 to-green-700 text-white py-2 overflow-hidden">
+      {/* Modern Scrolling Text Animation */}
+      <div className="bg-gradient-to-r from-modern-green to-modern-green-400 text-white py-3 overflow-hidden shadow-lg">
         <div className="animate-marquee whitespace-nowrap">
-          <span className="text-sm font-semibold mx-4">
+          <span className="text-sm font-bold mx-8 tracking-wide">
             Kiongozi mkuu wa Vida Divina Tanzania - Mtaalamu wa mafunzo ya network marketing, mshauri wa bidhaa za afya na mapato
           </span>
         </div>
       </div>
 
-      <header className="bg-vida-white shadow-xl sticky top-0 z-50 border-b-2 border-green-600/20">
+      <header className="bg-white shadow-2xl sticky top-0 z-50 border-b border-modern-green-100 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
-            {/* Enhanced Logo */}
+            {/* Modern Logo Section */}
             <div className="flex items-center space-x-4">
-              <div className="relative">
+              <div className="relative modern-float">
                 <img 
                   src="/lovable-uploads/6ee79d10-de0e-44b9-a79d-ceadfb6f4daa.png" 
                   alt="Frank Vida Divina Logo" 
-                  className="h-14 w-auto drop-shadow-lg"
+                  className="h-16 w-auto drop-shadow-2xl"
                 />
-                <div className="absolute -inset-1 bg-gradient-to-r from-green-600 to-green-500 opacity-20 blur-sm rounded-full"></div>
+                <div className="absolute -inset-2 bg-modern-gradient opacity-20 blur-lg rounded-full"></div>
               </div>
               <div className="hidden sm:block">
-                <h1 className="text-3xl font-bold bg-gradient-to-r from-green-600 to-green-500 bg-clip-text text-transparent">
+                <h1 className="text-3xl font-black bg-green-gradient bg-clip-text text-transparent tracking-tight">
                   FRANK VIDA DIVINA
                 </h1>
-                <p className="text-sm text-green-700 font-semibold tracking-wider">
+                <p className="text-sm text-modern-green-600 font-bold tracking-widest">
                   Duka la Dawa la Hali ya Juu
                 </p>
               </div>
             </div>
 
-            {/* Desktop Navigation */}
+            {/* Modern Desktop Navigation */}
             <nav className="hidden md:flex space-x-8">
               {navigation.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-foreground hover:text-green-600 transition-all duration-300 font-semibold relative group"
+                  className="text-modern-green-700 hover:text-modern-green-500 transition-all duration-300 font-bold relative group px-2 py-1"
                 >
                   {item.name}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-green-600 transition-all duration-300 group-hover:w-full"></span>
+                  <span className="absolute -bottom-1 left-0 w-0 h-1 bg-modern-gradient transition-all duration-300 group-hover:w-full rounded-full"></span>
                 </a>
               ))}
             </nav>
 
-            {/* Enhanced Action Buttons */}
+            {/* Modern Action Buttons */}
             <div className="hidden md:flex items-center space-x-3">
               <Button 
                 onClick={() => window.open(`tel:${phoneNumber}`, '_self')}
                 variant="outline" 
                 size="sm" 
-                className="border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white transition-all duration-300 font-semibold shadow-md hover:shadow-lg"
+                className="border-2 border-modern-green-500 text-modern-green-600 hover:bg-modern-green-500 hover:text-white transition-all duration-300 font-bold shadow-lg hover:shadow-xl modern-hover"
               >
                 <Phone className="h-4 w-4 mr-2" />
                 Piga Simu
@@ -81,14 +81,14 @@ const Header = () => {
               
               <Button 
                 onClick={() => window.open(whatsappLink, '_blank')}
-                className="bg-green-600 hover:bg-green-700 text-white font-semibold shadow-md hover:shadow-lg transition-all duration-300"
+                className="bg-modern-green-500 hover:bg-modern-green-600 text-white font-bold shadow-lg hover:shadow-xl transition-all duration-300 modern-hover"
                 size="sm"
               >
                 <MessageCircle className="h-4 w-4 mr-2" />
                 WhatsApp
               </Button>
               
-              <Button className="bg-gradient-to-r from-green-600 to-green-500 hover:from-green-700 hover:to-green-600 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+              <Button className="bg-modern-gradient hover:opacity-90 text-white font-bold shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 modern-glow">
                 <ShoppingCart className="h-4 w-4 mr-2" />
                 Omba Dawa
               </Button>
@@ -100,22 +100,22 @@ const Header = () => {
                 variant="ghost"
                 size="sm"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="text-green-600"
+                className="text-modern-green-600 hover:bg-modern-green-50"
               >
                 {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               </Button>
             </div>
           </div>
 
-          {/* Enhanced Mobile Navigation */}
+          {/* Modern Mobile Navigation */}
           {isMenuOpen && (
-            <div className="md:hidden animate-fade-in bg-gradient-to-b from-vida-white to-vida-cream border-t border-green-600/20">
+            <div className="md:hidden animate-fade-in glass-effect border-t border-modern-green-100 rounded-b-lg">
               <div className="px-2 pt-2 pb-4 space-y-2 sm:px-3">
                 {navigation.map((item) => (
                   <a
                     key={item.name}
                     href={item.href}
-                    className="block px-4 py-3 text-foreground hover:text-green-600 hover:bg-green-600/10 transition-all duration-300 rounded-lg font-medium"
+                    className="block px-4 py-3 text-modern-green-700 hover:text-modern-green-500 hover:bg-modern-green-50 transition-all duration-300 rounded-lg font-bold"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}
@@ -125,19 +125,19 @@ const Header = () => {
                   <Button 
                     onClick={() => window.open(`tel:${phoneNumber}`, '_self')}
                     variant="outline" 
-                    className="w-full border-2 border-green-600 text-green-600 font-semibold"
+                    className="w-full border-2 border-modern-green-500 text-modern-green-600 font-bold modern-hover"
                   >
                     <Phone className="h-4 w-4 mr-2" />
                     Piga Simu
                   </Button>
                   <Button 
                     onClick={() => window.open(whatsappLink, '_blank')}
-                    className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold"
+                    className="w-full bg-modern-green-500 hover:bg-modern-green-600 text-white font-bold modern-hover"
                   >
                     <MessageCircle className="h-4 w-4 mr-2" />
                     WhatsApp
                   </Button>
-                  <Button className="w-full bg-gradient-to-r from-green-600 to-green-500 text-white font-semibold">
+                  <Button className="w-full bg-modern-gradient text-white font-bold modern-hover">
                     <ShoppingCart className="h-4 w-4 mr-2" />
                     Omba Dawa
                   </Button>
