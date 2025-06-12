@@ -52,13 +52,13 @@ const ProductCarousel = () => {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-r from-vida-burgundy to-vida-burgundy-dark">
+    <section className="py-16 bg-gradient-to-r from-green-700 to-green-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Bidhaa Zetu za Hali ya Juu
           </h2>
-          <p className="text-vida-cream text-lg">
+          <p className="text-green-100 text-lg">
             Chunguza mkusanyiko wetu wa dawa za ubora wa kimataifa
           </p>
         </div>
@@ -82,15 +82,15 @@ const ProductCarousel = () => {
                         className="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500"
                       />
                     </div>
-                    <h3 className="font-bold text-vida-burgundy text-center mb-2 text-sm">
+                    <h3 className="font-bold text-green-700 text-center mb-2 text-sm">
                       {product.name}
                     </h3>
-                    <p className="text-center text-vida-burgundy-dark font-semibold mb-4">
+                    <p className="text-center text-green-800 font-semibold mb-4">
                       {product.price}
                     </p>
                     <Button 
                       size="sm" 
-                      className="w-full bg-vida-burgundy hover:bg-vida-burgundy-dark text-white"
+                      className="w-full bg-green-600 hover:bg-green-700 text-white"
                     >
                       <ShoppingCart className="h-4 w-4 mr-2" />
                       Omba Sasa
@@ -100,8 +100,8 @@ const ProductCarousel = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="text-white border-white hover:bg-white hover:text-vida-burgundy" />
-          <CarouselNext className="text-white border-white hover:bg-white hover:text-vida-burgundy" />
+          <CarouselPrevious className="text-white border-white hover:bg-white hover:text-green-600" />
+          <CarouselNext className="text-white border-white hover:bg-white hover:text-green-600" />
         </Carousel>
       </div>
     </section>
