@@ -1,5 +1,5 @@
 
-import { Star, ShoppingCart, Info } from 'lucide-react';
+import { Star, ShoppingCart, Info, MessageCircle } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -316,12 +316,12 @@ Asante!`;
                   </Button>
                   <Button 
                     size="sm" 
-                    className="flex-1 bg-vida-burgundy hover:bg-vida-burgundy-dark text-white"
+                    className="flex-1 bg-green-600 hover:bg-green-700 text-white"
                     disabled={!medicine.inStock}
                     onClick={() => handleOrderMedicine(medicine)}
                   >
-                    <ShoppingCart className="h-4 w-4 mr-2" />
-                    Omba
+                    <MessageCircle className="h-4 w-4 mr-2" />
+                    Omba Sasa
                   </Button>
                 </div>
               </CardContent>

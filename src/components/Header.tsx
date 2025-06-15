@@ -32,27 +32,21 @@ const Header = () => {
 
       <header className="bg-white shadow-2xl sticky top-0 z-50 border-b border-modern-green-100 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-3">
-            {/* Modern Logo Section with improved layout */}
-            <div className="flex items-center space-x-3">
+          <div className="flex justify-between items-center py-4">
+            {/* Enhanced Logo Section with bigger logo and simplified layout */}
+            <div className="flex items-center space-x-4">
               <div className="relative modern-float">
                 <img 
                   src="/lovable-uploads/30caa16b-d0bc-4092-b137-15dbd3acdc4b.png" 
                   alt="Vida Divina Logo" 
-                  className="h-20 w-auto drop-shadow-2xl object-contain"
+                  className="h-24 w-auto drop-shadow-2xl object-contain"
                 />
                 <div className="absolute -inset-2 bg-gradient-to-r from-modern-green via-modern-gold to-modern-green opacity-20 blur-lg rounded-full"></div>
               </div>
               <div className="hidden sm:block">
-                <h1 className="text-2xl font-black bg-gradient-to-r from-modern-green via-modern-gold to-modern-green bg-clip-text text-transparent tracking-tight leading-tight">
+                <h1 className="text-xl font-black bg-gradient-to-r from-modern-green via-modern-gold to-modern-green bg-clip-text text-transparent tracking-tight leading-tight">
                   FRANK VIDA DIVINA
                 </h1>
-                <p className="text-xs text-modern-green-600 font-bold tracking-widest">
-                  Duka la Dawa la Hali ya Juu
-                </p>
-                <p className="text-xs text-modern-green-500 font-medium">
-                  Makumbusho Mwanga Tower Floor Number 3
-                </p>
               </div>
             </div>
 
