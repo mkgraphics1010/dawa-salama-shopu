@@ -37,11 +37,11 @@ const Footer = () => {
             <div className="flex items-center space-x-3 mb-6">
               <div className="relative">
                 <img 
-                  src="/lovable-uploads/6ee79d10-de0e-44b9-a79d-ceadfb6f4daa.png" 
-                  alt="Frank Vida Divina Logo" 
-                  className="h-12 w-auto filter brightness-0 invert drop-shadow-lg"
+                  src="/lovable-uploads/30caa16b-d0bc-4092-b137-15dbd3acdc4b.png" 
+                  alt="Vida Divina Logo" 
+                  className="h-12 w-auto drop-shadow-lg"
                 />
-                <div className="absolute -inset-1 bg-white/20 blur-sm rounded-full"></div>
+                <div className="absolute -inset-1 bg-gradient-to-r from-modern-gold/20 to-white/20 blur-sm rounded-full"></div>
               </div>
               <div>
                 <h3 className="text-2xl font-bold">FRANK VIDA DIVINA</h3>
@@ -66,13 +66,13 @@ const Footer = () => {
             </div>
             
             <div className="flex space-x-4">
-              <a href="https://facebook.com/frankvidadivinatanzania" target="_blank" rel="noopener noreferrer" className="hover:text-vida-cream transition-colors duration-300 transform hover:scale-110">
+              <a href="https://facebook.com/frankvidadivinatanzania" target="_blank" rel="noopener noreferrer" className="hover:text-modern-gold transition-colors duration-300 transform hover:scale-110">
                 <Facebook className="h-6 w-6" />
               </a>
-              <a href="#" className="hover:text-vida-cream transition-colors duration-300 transform hover:scale-110">
+              <a href="#" className="hover:text-modern-gold transition-colors duration-300 transform hover:scale-110">
                 <Twitter className="h-6 w-6" />
               </a>
-              <a href="https://instagram.com/frankvidadivinatanzania" target="_blank" rel="noopener noreferrer" className="hover:text-vida-cream transition-colors duration-300 transform hover:scale-110">
+              <a href="https://instagram.com/frankvidadivinatanzania" target="_blank" rel="noopener noreferrer" className="hover:text-modern-gold transition-colors duration-300 transform hover:scale-110">
                 <Instagram className="h-6 w-6" />
               </a>
             </div>
@@ -102,7 +102,7 @@ const Footer = () => {
             <ul className="space-y-3">
               {services.map((service) => (
                 <li key={service} className="text-base opacity-90 flex items-start">
-                  <span className="inline-block w-2 h-2 bg-green-200 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <span className="inline-block w-2 h-2 bg-modern-gold rounded-full mt-2 mr-3 flex-shrink-0"></span>
                   {service}
                 </li>
               ))}
@@ -146,12 +146,13 @@ const Footer = () => {
                 </div>
               </div>
               
-              <div className="flex items-start space-x-3 p-3 bg-white/10 rounded-lg">
-                <MapPin className="h-5 w-5 opacity-80 mt-1 text-green-200" />
+              <div className="flex items-start space-x-3 p-3 bg-red-500/10 rounded-lg border border-red-400/30">
+                <MapPin className="h-5 w-5 mt-1 text-red-300" />
                 <div>
-                  <p className="text-sm font-semibold">Mahali</p>
+                  <p className="text-sm font-semibold text-red-200">Mahali</p>
                   <p className="text-sm">
-                    Mtaa wa Kariakoo<br />
+                    Makumbusho Mwanga Tower<br />
+                    Floor Number 3<br />
                     Dar es Salaam, Tanzania
                   </p>
                 </div>

@@ -33,18 +33,18 @@ const Header = () => {
       <header className="bg-white shadow-2xl sticky top-0 z-50 border-b border-modern-green-100 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
-            {/* Modern Logo Section */}
+            {/* Modern Logo Section with new Vida Divina logo */}
             <div className="flex items-center space-x-4">
               <div className="relative modern-float">
                 <img 
-                  src="/lovable-uploads/6ee79d10-de0e-44b9-a79d-ceadfb6f4daa.png" 
-                  alt="Frank Vida Divina Logo" 
+                  src="/lovable-uploads/30caa16b-d0bc-4092-b137-15dbd3acdc4b.png" 
+                  alt="Vida Divina Logo" 
                   className="h-16 w-auto drop-shadow-2xl"
                 />
-                <div className="absolute -inset-2 bg-modern-gradient opacity-20 blur-lg rounded-full"></div>
+                <div className="absolute -inset-2 bg-gradient-to-r from-modern-green via-modern-gold to-modern-green opacity-20 blur-lg rounded-full"></div>
               </div>
               <div className="hidden sm:block">
-                <h1 className="text-3xl font-black bg-green-gradient bg-clip-text text-transparent tracking-tight">
+                <h1 className="text-3xl font-black bg-gradient-to-r from-modern-green via-modern-gold to-modern-green bg-clip-text text-transparent tracking-tight">
                   FRANK VIDA DIVINA
                 </h1>
                 <p className="text-sm text-modern-green-600 font-bold tracking-widest">
@@ -62,7 +62,7 @@ const Header = () => {
                   className="text-modern-green-700 hover:text-modern-green-500 transition-all duration-300 font-bold relative group px-2 py-1"
                 >
                   {item.name}
-                  <span className="absolute -bottom-1 left-0 w-0 h-1 bg-modern-gradient transition-all duration-300 group-hover:w-full rounded-full"></span>
+                  <span className="absolute -bottom-1 left-0 w-0 h-1 bg-gradient-to-r from-modern-green to-modern-gold transition-all duration-300 group-hover:w-full rounded-full"></span>
                 </a>
               ))}
             </nav>
@@ -88,7 +88,7 @@ const Header = () => {
                 WhatsApp
               </Button>
               
-              <Button className="bg-modern-gradient hover:opacity-90 text-white font-bold shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 modern-glow">
+              <Button className="bg-gradient-to-r from-modern-green via-modern-gold to-red-500 hover:opacity-90 text-white font-bold shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 modern-glow">
                 <ShoppingCart className="h-4 w-4 mr-2" />
                 Omba Dawa
               </Button>
@@ -137,7 +137,7 @@ const Header = () => {
                     <MessageCircle className="h-4 w-4 mr-2" />
                     WhatsApp
                   </Button>
-                  <Button className="w-full bg-modern-gradient text-white font-bold modern-hover">
+                  <Button className="w-full bg-gradient-to-r from-modern-green via-modern-gold to-red-500 text-white font-bold modern-hover">
                     <ShoppingCart className="h-4 w-4 mr-2" />
                     Omba Dawa
                   </Button>
