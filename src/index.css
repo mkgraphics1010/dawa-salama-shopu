@@ -104,6 +104,20 @@
   animation: marquee 25s linear infinite;
 }
 
+/* Background scrolling animation */
+@keyframes scrollBackground {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-slow-scroll {
+  animation: scrollBackground 60s linear infinite;
+}
+
 /* Enhanced modern animations */
 @keyframes slideInUp {
   from {

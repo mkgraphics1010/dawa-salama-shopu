@@ -53,23 +53,35 @@ const ProductCarousel = () => {
 
   return (
     <section className="py-20 bg-modern-gradient relative overflow-hidden">
+      {/* Moving Background Pattern with uploaded image */}
+      <div className="absolute inset-0 opacity-10">
+        <div 
+          className="w-[200%] h-full bg-repeat animate-slow-scroll"
+          style={{
+            backgroundImage: `url('/lovable-uploads/95bb5660-faa2-4397-9e36-0a380f9ecca2.png')`,
+            backgroundSize: '400px 400px',
+            animation: 'scrollBackground 60s linear infinite'
+          }}
+        ></div>
+      </div>
+      
       {/* Modern background elements */}
-      <div className="absolute inset-0 bg-black/5"></div>
-      <div className="absolute top-0 left-0 w-96 h-96 rounded-full bg-white/10 blur-3xl"></div>
-      <div className="absolute bottom-0 right-0 w-80 h-80 rounded-full bg-modern-gold/20 blur-2xl"></div>
+      <div className="absolute inset-0 bg-black/20"></div>
+      <div className="absolute top-0 left-0 w-96 h-96 rounded-full bg-white/5 blur-3xl"></div>
+      <div className="absolute bottom-0 right-0 w-80 h-80 rounded-full bg-modern-gold/10 blur-2xl"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight">
+          <h2 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight drop-shadow-2xl">
             Bidhaa Zetu za Hali ya Juu
           </h2>
-          <p className="text-white/90 text-xl font-medium max-w-3xl mx-auto leading-relaxed">
+          <p className="text-white/95 text-xl font-medium max-w-3xl mx-auto leading-relaxed drop-shadow-lg">
             Chunguza mkusanyiko wetu wa dawa za ubora wa kimataifa
           </p>
           <div className="flex justify-center mt-6">
             <div className="flex space-x-1">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} className="h-6 w-6 text-modern-gold fill-current" />
+                <Star key={i} className="h-6 w-6 text-modern-gold fill-current drop-shadow-lg" />
               ))}
             </div>
           </div>
@@ -85,7 +97,7 @@ const ProductCarousel = () => {
           <CarouselContent className="-ml-2 md:-ml-4">
             {products.map((product) => (
               <CarouselItem key={product.id} className="pl-2 md:pl-4 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
-                <Card className="modern-card bg-white/95 backdrop-blur-sm hover:bg-white transition-all duration-500 group border-0 shadow-2xl">
+                <Card className="modern-card bg-white/98 backdrop-blur-sm hover:bg-white transition-all duration-500 group border-0 shadow-2xl">
                   <CardContent className="p-8">
                     <div className="aspect-square mb-6 flex items-center justify-center bg-modern-green-50 rounded-2xl overflow-hidden relative">
                       <img
@@ -113,8 +125,8 @@ const ProductCarousel = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="text-white border-white/30 hover:bg-white hover:text-modern-green-600 backdrop-blur-sm" />
-          <CarouselNext className="text-white border-white/30 hover:bg-white hover:text-modern-green-600 backdrop-blur-sm" />
+          <CarouselPrevious className="text-white border-white/50 hover:bg-white hover:text-modern-green-600 backdrop-blur-sm shadow-lg" />
+          <CarouselNext className="text-white border-white/50 hover:bg-white hover:text-modern-green-600 backdrop-blur-sm shadow-lg" />
         </Carousel>
       </div>
     </section>
