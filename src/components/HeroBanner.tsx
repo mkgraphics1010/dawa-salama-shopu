@@ -56,6 +56,18 @@ const HeroBanner = () => {
           }`}
         >
           <div className={`bg-gradient-to-br ${slide.gradient} h-full flex items-center justify-center relative overflow-hidden`}>
+            {/* Moving Background Pattern with uploaded image */}
+            <div className="absolute inset-0 opacity-15">
+              <div 
+                className="w-[200%] h-full bg-repeat animate-slow-scroll"
+                style={{
+                  backgroundImage: `url('/lovable-uploads/95bb5660-faa2-4397-9e36-0a380f9ecca2.png')`,
+                  backgroundSize: '300px 300px',
+                  animation: 'scrollBackground 80s linear infinite'
+                }}
+              ></div>
+            </div>
+
             {/* Modern background pattern */}
             <div className="absolute inset-0 bg-black/10"></div>
             <div className="absolute top-0 left-0 w-full h-full opacity-10">
@@ -70,13 +82,13 @@ const HeroBanner = () => {
                   {slide.icon}
                 </div>
               </div>
-              <h1 className="text-5xl md:text-7xl font-black mb-6 slide-in-up tracking-tight">
+              <h1 className="text-5xl md:text-7xl font-black mb-6 slide-in-up tracking-tight drop-shadow-2xl">
                 {slide.title}
               </h1>
-              <p className="text-xl md:text-3xl mb-6 slide-in-right font-bold">
+              <p className="text-xl md:text-3xl mb-6 slide-in-right font-bold drop-shadow-lg">
                 {slide.subtitle}
               </p>
-              <p className="text-lg md:text-xl mb-12 max-w-4xl mx-auto opacity-95 fade-in-scale leading-relaxed">
+              <p className="text-lg md:text-xl mb-12 max-w-4xl mx-auto opacity-95 fade-in-scale leading-relaxed drop-shadow-lg">
                 {slide.description}
               </p>
               <div className="space-x-6 fade-in-scale">
@@ -84,12 +96,14 @@ const HeroBanner = () => {
                   size="lg" 
                   variant="outline" 
                   className="border-2 border-white text-white hover:bg-white hover:text-modern-green-600 font-bold px-8 py-4 text-lg modern-hover backdrop-blur-sm"
+                  onClick={() => window.location.href = '/medicines'}
                 >
                   Angalia Dawa
                 </Button>
                 <Button 
                   size="lg" 
                   className="bg-white text-modern-green-600 hover:bg-modern-green-50 font-bold px-8 py-4 text-lg shadow-2xl modern-hover"
+                  onClick={() => document.getElementById('medicine-request')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   Omba Sasa
                 </Button>

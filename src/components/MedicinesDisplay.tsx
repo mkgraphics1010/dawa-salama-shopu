@@ -185,9 +185,37 @@ const MedicinesDisplay = () => {
     ));
   };
 
+  const handleOrderMedicine = (medicine: any) => {
+    const whatsappNumber = "+255714530900";
+    const message = `Hujambo, nina mahitaji ya dawa:
+
+DAWA: ${medicine.name}
+BEI: ${medicine.price}
+KATEGORIA: ${medicine.category}
+
+Tafadhali nipatieni maelezo zaidi kuhusu dawa hii.
+
+Asante!`;
+
+    const whatsappLink = `https://wa.me/${whatsappNumber.replace(/[^0-9]/g, '')}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappLink, '_blank');
+  };
+
   return (
-    <section id="medicines" className="py-16 bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="medicines" className="py-16 bg-background relative">
+      {/* Moving Background Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div 
+          className="w-[200%] h-full bg-repeat animate-slow-scroll"
+          style={{
+            backgroundImage: `url('/lovable-uploads/95bb5660-faa2-4397-9e36-0a380f9ecca2.png')`,
+            backgroundSize: '400px 400px',
+            animation: 'scrollBackground 120s linear infinite'
+          }}
+        ></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-vida-burgundy mb-4">
             Dawa Zetu za Vida Divina
@@ -281,6 +309,7 @@ const MedicinesDisplay = () => {
                     size="sm" 
                     variant="outline" 
                     className="flex-1 border-vida-burgundy text-vida-burgundy hover:bg-vida-burgundy hover:text-white"
+                    onClick={() => window.location.href = '/medicines'}
                   >
                     <Info className="h-4 w-4 mr-2" />
                     Maelezo Zaidi
@@ -289,6 +318,7 @@ const MedicinesDisplay = () => {
                     size="sm" 
                     className="flex-1 bg-vida-burgundy hover:bg-vida-burgundy-dark text-white"
                     disabled={!medicine.inStock}
+                    onClick={() => handleOrderMedicine(medicine)}
                   >
                     <ShoppingCart className="h-4 w-4 mr-2" />
                     Omba
@@ -300,7 +330,11 @@ const MedicinesDisplay = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button size="lg" className="bg-vida-burgundy hover:bg-vida-burgundy-dark text-white">
+          <Button 
+            size="lg" 
+            className="bg-vida-burgundy hover:bg-vida-burgundy-dark text-white"
+            onClick={() => window.location.href = '/medicines'}
+          >
             Angalia Dawa Zaidi
           </Button>
         </div>
