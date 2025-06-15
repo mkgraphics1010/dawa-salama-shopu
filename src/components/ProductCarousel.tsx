@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ShoppingCart, Star } from 'lucide-react';
+import { ShoppingCart, Star, MessageCircle } from 'lucide-react';
 
 const ProductCarousel = () => {
   const products = [
@@ -50,6 +50,13 @@ const ProductCarousel = () => {
       image: "/lovable-uploads/0e1bae9b-db5a-4c12-902d-4d5c1d658bff.png"
     }
   ];
+
+  const handleOrderMedicine = (product: any) => {
+    const whatsappNumber = "+255714530900";
+    const message = `Hujambo! Naomba ${product.name} kwa bei ya ${product.price}. Tafadhali nipatieni maelezo zaidi na jinsi ya kupata dawa hii.`;
+    const whatsappLink = `https://wa.me/${whatsappNumber.replace(/[^0-9]/g, '')}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappLink, '_blank');
+  };
 
   return (
     <section className="py-20 bg-modern-gradient relative overflow-hidden">
@@ -98,7 +105,7 @@ const ProductCarousel = () => {
             {products.map((product) => (
               <CarouselItem key={product.id} className="pl-2 md:pl-4 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
                 <Card className="modern-card bg-white/98 backdrop-blur-sm hover:bg-white transition-all duration-500 group border-0 shadow-2xl">
-                  <CardContent className="p-8">
+                  <CardContent className="p-6">
                     <div className="aspect-square mb-6 flex items-center justify-center bg-modern-green-50 rounded-2xl overflow-hidden relative">
                       <img
                         src={product.image}
@@ -107,19 +114,34 @@ const ProductCarousel = () => {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-modern-green/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     </div>
-                    <h3 className="font-black text-modern-green-700 text-center mb-3 text-lg">
+                    <h3 className="font-black text-modern-green-700 text-center mb-2 text-lg leading-tight">
                       {product.name}
                     </h3>
                     <p className="text-center text-modern-green-600 font-bold mb-6 text-xl">
                       {product.price}
                     </p>
-                    <Button 
-                      size="sm" 
-                      className="w-full bg-modern-green-500 hover:bg-modern-green-600 text-white font-bold py-3 modern-hover shadow-lg"
-                    >
-                      <ShoppingCart className="h-4 w-4 mr-2" />
-                      Omba Sasa
-                    </Button>
+                    
+                    {/* Modern Button Layout */}
+                    <div className="space-y-3">
+                      <Button 
+                        size="sm" 
+                        variant="outline"
+                        className="w-full border-2 border-modern-green-500 text-modern-green-600 hover:bg-modern-green-500 hover:text-white font-bold py-3 modern-hover shadow-lg transition-all duration-300 bg-white/80 backdrop-blur-sm"
+                        onClick={() => window.location.href = '/medicines'}
+                      >
+                        <ShoppingCart className="h-4 w-4 mr-2" />
+                        Angalia Dawa
+                      </Button>
+                      
+                      <Button 
+                        size="sm" 
+                        className="w-full bg-gradient-to-r from-modern-green-500 via-modern-green-600 to-modern-green-700 hover:from-modern-green-600 hover:via-modern-green-700 hover:to-modern-green-800 text-white font-bold py-3 modern-hover shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+                        onClick={() => handleOrderMedicine(product)}
+                      >
+                        <MessageCircle className="h-4 w-4 mr-2" />
+                        Omba Sasa
+                      </Button>
+                    </div>
                   </CardContent>
                 </Card>
               </CarouselItem>
