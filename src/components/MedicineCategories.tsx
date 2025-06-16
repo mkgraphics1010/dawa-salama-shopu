@@ -1,46 +1,69 @@
 
 import { Pill, Heart, Brain, Bone, Eye, Baby } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { useNavigate } from 'react-router-dom';
+import { useToast } from '@/hooks/use-toast';
 
 const MedicineCategories = () => {
+  const navigate = useNavigate();
+  const { toast } = useToast();
+
   const categories = [
     {
       icon: <Heart className="h-8 w-8 text-vida-burgundy" />,
       title: "Dawa za Moyo",
       description: "Dawa za kusaidia afya ya moyo na mishipa ya damu",
-      count: "45+ Dawa"
+      count: "45+ Dawa",
+      route: "/heart-medicines"
     },
     {
       icon: <Brain className="h-8 w-8 text-vida-burgundy" />,
       title: "Dawa za Ubongo",
       description: "Dawa za kusaidia kazi za akili na ubongo",
-      count: "32+ Dawa"
+      count: "32+ Dawa",
+      route: "/brain-medicines"
     },
     {
       icon: <Bone className="h-8 w-8 text-vida-burgundy" />,
       title: "Dawa za Mifupa",
       description: "Dawa za kuimarisha mifupa na viungo",
-      count: "28+ Dawa"
+      count: "28+ Dawa",
+      route: null
     },
     {
       icon: <Eye className="h-8 w-8 text-vida-burgundy" />,
       title: "Dawa za Macho",
       description: "Dawa za kusaidia afya ya macho na kuona",
-      count: "20+ Dawa"
+      count: "20+ Dawa",
+      route: null
     },
     {
       icon: <Baby className="h-8 w-8 text-vida-burgundy" />,
       title: "Dawa za Watoto",
       description: "Dawa maalum za watoto na vipimo vyao",
-      count: "38+ Dawa"
+      count: "38+ Dawa",
+      route: null
     },
     {
       icon: <Pill className="h-8 w-8 text-vida-burgundy" />,
       title: "Dawa za Kawaida",
       description: "Dawa za kila siku na za haraka",
-      count: "65+ Dawa"
+      count: "65+ Dawa",
+      route: null
     }
   ];
+
+  const handleCategoryClick = (category) => {
+    if (category.route) {
+      navigate(category.route);
+    } else {
+      toast({
+        title: "Dawa Haipatikani",
+        description: `${category.title} haipatikani kwa sasa. Tafadhali jaribu baadaye.`,
+        variant: "destructive",
+      });
+    }
+  };
 
   return (
     <section id="categories" className="py-16 bg-vida-cream">
@@ -56,7 +79,11 @@ const MedicineCategories = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {categories.map((category, index) => (
-            <Card key={index} className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-2 cursor-pointer border-l-4 border-l-vida-burgundy">
+            <Card 
+              key={index} 
+              className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-2 cursor-pointer border-l-4 border-l-vida-burgundy"
+              onClick={() => handleCategoryClick(category)}
+            >
               <CardHeader className="text-center">
                 <div className="flex justify-center mb-4">
                   <div className="p-4 bg-vida-burgundy/10 rounded-full group-hover:bg-vida-burgundy/20 transition-colors duration-300">
